@@ -124,8 +124,9 @@ A basis for the column space of $A$ can be obtained by taking the columns of $A$
 
 \subsection{kernel == nullspace}
 $\text{kern}(A) = \left\{ x\in\mathbb{R}^n : Ax = 0 \right\}$ \quad (the set of vectors mapping to 0)\\
-For nonsingular A this has one element and $\text{dim}(\text{kern}(A)) = 0$ (?)\\
 
+\sect{rank and nullity}
+$rank(A) + nullity(A) = n$\\
 
 \subsection{trace}
 defined on n$\times$n square matrices: $\mathrm{tr}(A) = a_{11} + a_{22} + \dots + a_{nn}$\\
@@ -218,5 +219,27 @@ The $\cup$ of two subspaces of $\mathbb{R}^{n}$ may not be a subspace of $\mathb
 The dimension of a vector space $V$ , denoted by $dim(V)$, is defined to be the number of vectors in a basis for $V$.\\
 In addition, we define the dimension of the zero space to be zero.
 
+\sect{solving $[A|b]$}
+Do Gaussian elimination on the augmented matrix $[A|b]$.\\
+If $rank([A|b]) > rank(A) \Rightarrow Ax = b \text{ does not have a solution} \Rightarrow \text{b is not in the column space of } A$
+
+\subsection{dimension general case}
+Vector space $M(m, n)$ of all m-by-n matrices.\\
+The dimension of this space is $m \times n$\\
+Let $E_{ij}$ be the m-by-n matrix that is all zero except for a 1 in the $(i, j)$ entry.\\
+The all the $E$ matrices are a basis for $M(m, n)$
+
+\subsection{Reasoning about dimension}
+Let $S \subseteq \mathbb{R}^{n}$ be a subspace:\\
+\quad if vectors $v_{1}, \dots, v_{k} \in S$ are linearly independent, then\\
+\quad \quad $dim(S) \geq k$\\
+\quad if $span({v_{1}, \dots, v_{k}}) = S$ then\\
+\quad \quad $dim(S) \leq k$
+
+\subsection{General solution for $Ax = b$}
+$x$ = (the general solution of $Ax = 0$)\\
+\quad $+$ (one particular solution of $Ax = b$).\\
+e.g\\
+$x = s*v_{1} + t*v_{2} + a$\\ $v_{i}$ spans nullspace of $A$\\$a$ is a particular solution.
 \end{multicols}
 \end{document}
